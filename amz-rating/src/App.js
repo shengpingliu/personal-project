@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { ReactComponent as Logo } from "./logo.svg";
+import { useState } from "react";
+import Star from "./components/Star";
+import "./App.css";
 
 function App() {
+  const [rating, setRating] = useState(0);
+  const [hoverState, setHoverState] = useState(0);
+
+  const stars = [1, 2, 3, 4, 5];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo className="App-logo" />
+      <h1>Amazon Star Rating</h1>
+      <div className="flex-container">
+        {stars.map((star) => {
+          return (
+            <Star
+              key={star}
+              starId={star}
+              rating={hoverState || rating}
+              onMouseEnter={() => setHoverState(star)}
+              onMouseLeave={() => setHoverState(0)}
+              onClick={() => setRating(star)}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
