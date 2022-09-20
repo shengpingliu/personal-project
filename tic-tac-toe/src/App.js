@@ -10,7 +10,6 @@ function App() {
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(history[stepNumber]);
   const xO = xIsNext ? "X" : "O";
-  // let cubeNumber = [];
 
   const restartGame = () => {
     setHistory([Array(9).fill(null)]);
