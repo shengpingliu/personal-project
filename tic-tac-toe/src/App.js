@@ -15,6 +15,7 @@ function App() {
   const restartGame = () => {
     setHistory([Array(9).fill(null)]);
     setStepNumber(0);
+    setXisNext(true);
   };
   const handleClick = (i) => {
     const historyPoint = history.slice(0, stepNumber + 1);
