@@ -1,0 +1,23 @@
+.game-cube {
+    border: 1px solid black;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+
+.squares {
+    background: #272727;
+    border: none;
+    font-size: 5rem;
+    font-weight: 800;
+    cursor: pointer;
+    outline: none;
+}
+
+.X {
+    color: red;
+}
+
+.O {
+    color: green;
+}
