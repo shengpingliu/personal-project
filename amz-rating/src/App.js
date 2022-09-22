@@ -1,6 +1,7 @@
 import { ReactComponent as Logo } from "./logo.svg";
 import { useState } from "react";
 import Star from "./components/Star";
+import Card from "./components/Card/Card";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Logo className="App-logo" />
       <h1>Amazon Star Rating</h1>
+      <Card />
       <div className="flex-container">
         {stars.map((star) => {
           return (
