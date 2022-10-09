@@ -6,11 +6,13 @@
 
 .card {
     position: relative;
-    transform-style: preserve-3d;
     width: 100px;
     height: 100px;
-    box-shadow: 0 1px 3px gray;
+    transform-style: preserve-3d;
+    box-shadow: 0px 2px 3px grey;
     transition: 1.5s;
+    text-align: center;
+    line-height: 100px;
 }
 
 .card:hover {
@@ -19,22 +21,17 @@
 
 .card-front {
     position: absolute;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: red;
     backface-visibility: hidden;
-    color: white;
-    text-align: center;
-    line-height: 100px;
 }
 
 .card-back {
     position: absolute;
-    height: 100%;
     width: 100%;
-    background-color: aquamarine;
+    height: 100%;
+    background-color: aqua;
     backface-visibility: hidden;
-    color: white;
-    line-height: 100px;
     transform: rotateY(-180deg);
 }
